@@ -21,4 +21,25 @@ class Vendedor{
         void setNome(std::string nome){
             this -> nome = nome;
         }
+
+        int getIdVendedor(){
+            return id;
+        }
+        void setIdVendedor(int id){
+            this -> id = id;
+        }
+
+        int getTelefoneVendedor(){
+            return telefone;
+        }
+        void setTelefoneVendedor(int telefone){
+            this -> telefone = telefone;
+        }
+
+        int getWhatsappVendedor(){
+            return whatsapp;
+        }
+        void setWhatsappVendedor(int whatsapp){
+            this -> whatsapp = whatsapp;
+        }
 };
