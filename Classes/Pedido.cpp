@@ -28,4 +28,14 @@ public:
         : id(id)
     {
     }
+
+    Cliente getIdCliente()
+    {
+        return cliente;
+    }
+
+    void setIdCliente(Cliente cliente)
+        : cliente(cliente)
+    {
+    }
 };
