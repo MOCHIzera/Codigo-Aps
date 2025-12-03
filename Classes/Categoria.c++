@@ -1,0 +1,1 @@
+enum Categoria{Pele, Cabelo, Unha, Outros};

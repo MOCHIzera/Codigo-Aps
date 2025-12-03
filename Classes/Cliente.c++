@@ -1,6 +1,6 @@
 #include<string>
 
-class Vendedor{
+class Cliente{
     private:
         std::string nome;
         int id;
@@ -8,7 +8,7 @@ class Vendedor{
         int whatsapp;
     
     public:
-        void vendedor(std::string nome, int id, int telefone, int whatsapp){
+        void cliente(std::string nome, int id, int telefone, int whatsapp){
             this -> nome = nome;
             this -> id = id;
             this -> telefone = telefone;
@@ -22,24 +22,24 @@ class Vendedor{
             this -> nome = nome;
         }
 
-        int getIdVendedor(){
+        int getIdCliente(){
             return id;
         }
-        void setIdVendedor(int id){
+        void setIdCliente(int id){
             this -> id = id;
         }
 
-        int getTelefoneVendedor(){
+        int getTelefoneCliente(){
             return telefone;
         }
-        void setTelefoneVendedor(int telefone){
+        void setTelefoneCliente(int telefone){
             this -> telefone = telefone;
         }
 
-        int getWhatsappVendedor(){
+        int getWhatsappCliente(){
             return whatsapp;
         }
-        void setWhatsappVendedor(int whatsapp){
+        void setWhatsappCliente(int whatsapp){
             this -> whatsapp = whatsapp;
         }
 };
