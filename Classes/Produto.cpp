@@ -1,4 +1,4 @@
-#include "Categoria.c++"
+#include "Categoria.cpp"
 #include<string>
 
 class Produto{

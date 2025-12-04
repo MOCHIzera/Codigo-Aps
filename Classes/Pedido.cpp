@@ -1,10 +1,11 @@
-#include "Cliente.c++"
-#include "Produto.c++"
-#include "Reserva.c++"
+#include "Cliente.cpp"
+#include "Produto.cpp"
+#include "Reserva.cpp"
 
 class Pedido
 {
 private:
+    /*atribuicao das variaveis privadas*/
     int id;
     Cliente cliente;
     Produto produto, valor, quantidade;
