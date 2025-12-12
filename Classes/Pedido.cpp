@@ -8,13 +8,13 @@ private:
     /*atribuicao das variaveis privadas*/
     int id;
     Cliente cliente;
-    Produto produto, valor, quantidade;
+    Produto produto;
     Reserva reserva;
 
 public:
     /*criação do construtor*/
     Pedido(int id, const Cliente &cliente, const Produto &produto, const Reserva &reserva, const Produto &valor, const Produto &quantidade)
-        : id(id), cliente(cliente), produto(produto), reserva(reserva), valor(valor), quantidade(quantidade)
+        : id(id), cliente(cliente), produto(produto), reserva(reserva)
     {
     }
 
@@ -24,8 +24,8 @@ public:
     }
 
     void setIdPedido(int id)
-        : id(id)
     {
+        this->id(id);
     }
 
     Cliente getIdCliente()
@@ -34,8 +34,8 @@ public:
     }
 
     void setIdCliente(Cliente cliente)
-        : cliente(cliente)
     {
+        this->cliente(cliente);
     }
 
     Produto getIdProduto()
@@ -43,9 +43,9 @@ public:
         return produto;
     }
 
-    void setIdProduto()
-        : produto(produto)
+    void setIdProduto(Produto produto)
     {
+        this->produto(produto);
     }
 
     Reserva getIdReserva()
@@ -53,8 +53,8 @@ public:
         return reserva;
     }
 
-    void setIdReserva()
-        : reserva(reserva)
+    void setIdReserva(Reserva reserva)
     {
+        this->reserva(reserva);
     }
 };
