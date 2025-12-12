@@ -27,7 +27,7 @@ public:
 
     void setIdPedido(int id)
     {
-        this->id(id);
+        this->id = id;
     }
 
     Cliente getIdCliente()
@@ -37,7 +37,7 @@ public:
 
     void setIdCliente(Cliente cliente)
     {
-        this->cliente(cliente);
+        this->cliente = cliente;
     }
 
     Produto getIdProduto()
@@ -47,7 +47,7 @@ public:
 
     void setIdProduto(Produto produto)
     {
-        this->produto(produto);
+        this->produto = produto;
     }
 
     Reserva getIdReserva()
@@ -57,6 +57,6 @@ public:
 
     void setIdReserva(Reserva reserva)
     {
-        this->reserva(reserva);
+        this->reserva = reserva;
     }
 };
