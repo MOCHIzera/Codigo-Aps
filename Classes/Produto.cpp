@@ -10,7 +10,9 @@ class Produto{
         int quantidade;
     
     public:
-        void produto(int id, std::string nome, Categoria categoria, float valor, int quantidade){
+        Produto(){} // Constructor Base
+
+        Produto(int id, std::string nome, Categoria categoria, float valor, int quantidade){
             this -> id = id;
             this -> nome = nome;
             this -> categoria = categoria;

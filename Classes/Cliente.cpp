@@ -8,7 +8,9 @@ class Cliente{
         int whatsapp;
     
     public:
-        void cliente(std::string nome, int id, int telefone, int whatsapp){
+        Cliente(){} // Constructor Base
+
+        Cliente(std::string nome, int id, int telefone, int whatsapp){
             this -> nome = nome;
             this -> id = id;
             this -> telefone = telefone;

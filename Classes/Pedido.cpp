@@ -12,6 +12,8 @@ private:
     Reserva reserva;
 
 public:
+    Pedido(){} // Constructor Base
+
     /*criação do construtor*/
     Pedido(int id, const Cliente &cliente, const Produto &produto, const Reserva &reserva, const Produto &valor, const Produto &quantidade)
         : id(id), cliente(cliente), produto(produto), reserva(reserva)
