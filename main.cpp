@@ -101,7 +101,8 @@ void intro(){
 =========================================================================================================================================================
 
 )";
-    std::cout << "Bem vindo ao sistema de Registro de Vendas e Clientes." << std::endl << std::endl;
+    std::cout << "Bem vindo ao sistema de Registro de Vendas e Clientes." << std::endl;
+    std::cout << "Sistema criado pela equipe A2." << std::endl << std::endl;
 }
 
 int main(){
