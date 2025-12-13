@@ -1,6 +1,6 @@
-#include "DAOs\ClienteDAO.cpp"
-#include "DAOs\ProdutoDAO.cpp"
-#include "DAOs\VendedorDAO.cpp"
+#include "../DAOs/ClienteDAO.cpp"
+#include "../DAOs/ProdutoDAO.cpp"
+#include "../DAOs/VendedorDAO.cpp"
 
 class DaoManager {
 private:
