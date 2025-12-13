@@ -1,5 +1,5 @@
 #include <vector>
-#include "Classes\Vendedor.cpp"
+#include "../Classes/Vendedor.cpp"
 
 class VendedorDAO {
     private:

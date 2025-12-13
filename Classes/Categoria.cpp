@@ -1,1 +1,1 @@
-enum Categoria{Pele, Cabelo, Unha, Outros};
+enum class Categoria{Pele, Cabelo, Unha, Outros};
