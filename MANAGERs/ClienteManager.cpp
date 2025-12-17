@@ -32,7 +32,11 @@ public:
         return dao.remover(id);
     }
 
-    Cliente *buscarCliente(int id) {
+    Cliente *buscarClienteId(int id) {
         return daoManager.getClienteDAO().recuperarPeloId(id);
+    }
+
+    Cliente *buscarClienteNome(string nome) {
+        return daoManager.getClienteDAO().recuperarPeloNome(nome);
     }
 };

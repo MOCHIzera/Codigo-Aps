@@ -21,7 +21,7 @@ void creditos(){
     std::cout << "Trabalho feito sobre orientação do Professor Lucio Geronimo Valentin." << std::endl << std::endl;
 }
 
-void cadastroCliente(){
+int cadastroCliente(ClienteManager &clienteManager){
     setlocale(LC_ALL, "pt_BR.utf8");
     DaoManager daoManager;
     ClienteManager clienteManager(daoManager);
@@ -42,21 +42,80 @@ void cadastroCliente(){
 
     Cliente c(id, nome, telefone);
 
-    Cliente *cli = clienteManager.buscarCliente(id);
-
-    clienteManager.cadastrarCliente(c);
-    if(cli){
+    if(clienteManager.cadastrarCliente(c)){
         std::cout << "Cliente Cadastrado!" << std::endl;
+    } else{
+        std::cout << "ERRO: Já existe algum cliente com este ID." << std::endl;
     }
+}
+
+void removeCliente(ClienteManager &clienteManager){
+    setlocale(LC_ALL, "pt_BR.utf8");
+    DaoManager daoManager;
+    ClienteManager clienteManager(daoManager);
+
+    int id;
+
+    std::cout << "Insira o ID: ";
+    std::cin >> id;
+
+
+}
+
+void buscaCliente(ClienteManager &clienteManager){
+
+}
+
+void listaCliente(ClienteManager &clienteManager){
+
+}
+
+void atualizarCliente(ClienteManager &clienteManager){
+
+}
+
+void subMenuCliente(ClienteManager &clienteManager){
+    int opcao = 0;
+    std::cout << "O que você quer fazer?" << std::endl
+                          << ">> [1] Cadastrar um Cliente" << std::endl
+                          << ">> [2] Apagar um Cliente" << std::endl
+                          << ">> [3] Buscar um cliente" << std::endl
+                          << ">> [4] Listar todos os Clientes" << std::endl
+                          << ">> [5] Atualizar os dados de um cliente" << std::endl;
+    std::cin >> opcao;
+    switch(opcao){
+        case 1:{
+            cadastroCliente(clienteManager);
+            break;
+            }
+        case 2:{
+            removeCliente(clienteManager);
+            break;
+            }
+        case 3:{
+            buscaCliente(clienteManager);
+            break;
+            }
+        case 4:{
+            listaCliente(clienteManager);
+            break;
+            }
+        case 5:{
+            atualizarCliente(clienteManager);
+            break;
+            }
 }
 
 void opcoes(){
     setlocale(LC_ALL, "pt_BR.utf8");
+
+    cadastrarCliente();
+
     int opcao = 0;
 
     std::cout << "Insira uma das opções abaixo:" << std::endl
               << ">> [1] Gerar Estatisticas de Vendas" << std::endl
-              << ">> [2] Opção" << std::endl
+              << ">> [2] Opções Clientes" << std::endl
               << ">> [3] Opção" << std::endl
               << ">> [4] Opção" << std::endl
               << ">> [5] Opção" << std::endl
@@ -67,13 +126,14 @@ void opcoes(){
         std::cin >> opcao;
         switch(opcao){
             case 1:{
-                std::cout << "Opção " << opcao << " selecionada." << std::endl << std::endl;
+                std::cout << "Opção " << opcao << " selecionada." << std::endl << std::endl << std:: endl;
                 //metodoOpcao1();
                 break;
             }
             case 2:{
                 std::cout << "Opção " << opcao << " selecionada." << std::endl << std::endl;
-                //metodoOpcao2();
+                subMenuCliente;
+                }
                 break;
             }
             case 3:{
@@ -132,6 +192,9 @@ void intro(){
 
 int main(){
     setlocale(LC_ALL, "pt_BR.utf8");
+
+    DaoManager daoManager;
+    ClienteManager clienteManager(daoManager);
 
     char continuar;
 
