@@ -13,11 +13,11 @@ public:
     bool cadastrarVendedor(Vendedor vendedor) {
         VendedorDAO &dao = daoManager.getVendedorDAO();
         
-        if (dao.retrieve(vendedor.getIdVendedor()) != nullptr) {
+        if (dao.recuperar(vendedor.getIdVendedor()) != nullptr) {
             return false;
         }
 
-        dao.create(vendedor);
+        dao.criar(vendedor);
         return true;
     }
 
@@ -25,14 +25,14 @@ public:
         VendedorDAO &dao = daoManager.getVendedorDAO();
 
         // só remove se existir
-        if (dao.retrieve(idVendedor) == nullptr) {
+        if (dao.recuperar(idVendedor) == nullptr) {
             return false;
         }
 
-        return dao.remove(idVendedor);
+        return dao.remover(idVendedor);
     }
 
     Vendedor *buscarCliente(int idVendedor) {
-        return daoManager.getVendedorDAO().retrieve(idVendedor);
+        return daoManager.getVendedorDAO().recuperar(idVendedor);
     }
 };

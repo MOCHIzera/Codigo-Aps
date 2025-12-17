@@ -1,3 +1,5 @@
+#include "enum/FormatoPagamento.cpp"
+
 using namespace std;
 
 class Venda{
@@ -8,17 +10,19 @@ class Venda{
         int dataVenda;
         bool status;
         unsigned int quantidadeVenda;
+        FormatoPagamento formato;
     
     public:
         Venda() = default;
         
-        Venda(int idVenda, double valorTotal, int dataVencimento, int dataVenda, bool status, unsigned int quantidadeVenda){
+        Venda(int idVenda, double valorTotal, int dataVencimento, int dataVenda, bool status, unsigned int quantidadeVenda, FormatoPagamento formato){
             this -> idVenda = idVenda;
             this -> valorTotal = valorTotal;
             this -> dataVencimento = dataVencimento;
             this -> dataVenda = dataVenda;
             this -> status = status;
             this -> quantidadeVenda = quantidadeVenda;
+            this -> formato = formato;
         }
 
         int getIdVenda() const {
@@ -67,5 +71,13 @@ class Venda{
 
         void setQuantidadeVenda(unsigned int quantidadeVenda) {
             this->quantidadeVenda = quantidadeVenda;
+        }
+
+        FormatoPagamento getFormatoPagamento() const{
+            return formato;
+        }
+
+        void setFormatoPagamento(FormatoPagamento formato){
+            this -> formato = formato;
         }
 };

@@ -13,11 +13,11 @@ public:
     bool cadastrarCliente(Cliente cliente) {
         ClienteDAO &dao = daoManager.getClienteDAO();
         
-        if (dao.retrieve(cliente.getIdCliente()) != nullptr) {
+        if (dao.recuperar(cliente.getIdCliente()) != nullptr) {
             return false;
         }
 
-        dao.create(cliente);
+        dao.criar(cliente);
         return true;
     }
 
@@ -25,14 +25,14 @@ public:
         ClienteDAO &dao = daoManager.getClienteDAO();
 
         // só remove se existir
-        if (dao.retrieve(id) == nullptr) {
+        if (dao.recuperar(id) == nullptr) {
             return false;
         }
 
-        return dao.remove(id);
+        return dao.remover(id);
     }
 
     Cliente *buscarCliente(int id) {
-        return daoManager.getClienteDAO().retrieve(id);
+        return daoManager.getClienteDAO().recuperar(id);
     }
 };
