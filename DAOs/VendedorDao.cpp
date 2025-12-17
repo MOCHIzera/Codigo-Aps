@@ -9,12 +9,12 @@ class VendedorDAO {
 
     public:
         // CREATE
-        void create(Vendedor vendedor) {
+        void criar(Vendedor vendedor) {
             vendedores.push_back(vendedor);
         }
 
         // READ
-        Vendedor *retrieve(int id) {
+        Vendedor *recuperar(int id) {
             for (auto &v : vendedores) {
                 if (v.getIdVendedor() == id) {
                     return &v;
@@ -24,7 +24,7 @@ class VendedorDAO {
         }
 
         // UPDATE
-        bool update(Vendedor vendedorAtualizado) {
+        bool atualizar(Vendedor vendedorAtualizado) {
             for (auto &v : vendedores) {
                 if (v.getIdVendedor() == vendedorAtualizado.getIdVendedor()) {
                     v = vendedorAtualizado;
@@ -35,7 +35,7 @@ class VendedorDAO {
         }
 
         // DELETE
-        bool remove(int id) {
+        bool remover(int id) {
             for (auto it = vendedores.begin(); it != vendedores.end(); ++it) {
                 if (it->getIdVendedor() == id) {
                     vendedores.erase(it);
@@ -46,7 +46,7 @@ class VendedorDAO {
         }
 
         // LISTAR
-        vector<Vendedor> list() {
+        vector<Vendedor> listar() {
             return vendedores;
         }
 };

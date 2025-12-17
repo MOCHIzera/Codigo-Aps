@@ -9,12 +9,12 @@ class ClienteDAO {
 
     public:
         // CREATE
-        void create(Cliente cliente) {
+        void criar(Cliente cliente) {
             clientes.push_back(cliente);
         }
 
         // READ
-        Cliente *retrieve(int id) {
+        Cliente *recuperar(int id) {
             for (auto &c : clientes) {
                 if (c.getIdCliente() == id) {
                     return &c;
@@ -24,7 +24,7 @@ class ClienteDAO {
         }
 
         // UPDATE
-        bool update(Cliente clienteAtualizado) {
+        bool atualizar(Cliente clienteAtualizado) {
             for (auto &c : clientes) {
                 if (c.getIdCliente() == clienteAtualizado.getIdCliente()) {
                     c = clienteAtualizado;
@@ -35,7 +35,7 @@ class ClienteDAO {
         }
 
         // DELETE
-        bool remove(int id) {
+        bool remover(int id) {
             for (auto it = clientes.begin(); it != clientes.end(); ++it) {
                 if (it->getIdCliente() == id) {
                     clientes.erase(it);
@@ -46,7 +46,7 @@ class ClienteDAO {
         }
 
         // LISTAR
-        vector<Cliente> list() {
+        vector<Cliente> listar() {
             return clientes;
         }
 };

@@ -1,0 +1,1 @@
+enum class PagamentoOUVenda{Fiada, A vista, A debito, A prazo};

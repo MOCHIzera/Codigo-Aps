@@ -9,12 +9,12 @@ class ProdutoDAO {
 
     public:
         // CREATE
-        void create(Produto produto) {
+        void criar(Produto produto) {
             produtos.push_back(produto);
         }
 
         // READ
-        Produto *retrieve(int idProduto) {
+        Produto *recuperar(int idProduto) {
             for (auto &p : produtos) {
                 if (p.getIdProduto() == idProduto) {
                     return &p;
@@ -24,7 +24,7 @@ class ProdutoDAO {
         }
 
         // UPDATE
-        bool update(Produto produtoAtualizado) {
+        bool atualizar(Produto produtoAtualizado) {
             for (auto &p : produtos) {
                 if (p.getIdProduto() == produtoAtualizado.getIdProduto()) {
                     p = produtoAtualizado;
@@ -35,7 +35,7 @@ class ProdutoDAO {
         }
 
         // DELETE
-        bool remove(int idProduto) {
+        bool remover(int idProduto) {
             for (auto it = produtos.begin(); it != produtos.end(); ++it) {
                 if (it->getIdProduto() == idProduto) {
                     produtos.erase(it);
@@ -46,7 +46,7 @@ class ProdutoDAO {
         }
 
         // LISTAR
-        vector<Produto> list() {
+        vector<Produto> listar() {
             return produtos;
         }
 };
