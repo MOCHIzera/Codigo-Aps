@@ -1,16 +1,18 @@
 #include <string>
 
+using namespace std;
+
 class Vendedor{
     private:
         int idVendedor;
-        std::string nomeUsuario;
-        std::string email;
-        std::string senha;
+        string nomeUsuario;
+        string email;
+        string senha;
     
     public:
         Vendedor() = default;
 
-        Vendedor(int idVendedor, std::string nomeUsuario, std::string email, std::string senha){
+        Vendedor(int idVendedor, string nomeUsuario, string email, string senha){
             this -> idVendedor = idVendedor;
             this -> nomeUsuario = nomeUsuario;
             this -> email = email;
@@ -24,24 +26,24 @@ class Vendedor{
             this -> idVendedor = idVendedor;
         }
 
-        std::string getNomeUsuario(){
+        string getNomeUsuario(){
             return nomeUsuario;
         }
-        void setNomeUsuario(std::string nomeUsuario){
+        void setNomeUsuario(string nomeUsuario){
             this -> nomeUsuario = nomeUsuario;
         }
 
-        std::string getEmail(){
+        string getEmail(){
             return email;
         }
-        void setEmail(std::string email){
+        void setEmail(string email){
             this -> email = email;
         }
 
-        std::string getSenha(){
+        string getSenha(){
             return email;
         }
-        void setSenha(std::string senha){
+        void setSenha(string senha){
             this -> senha = senha;
         }
 };

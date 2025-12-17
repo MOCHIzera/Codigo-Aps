@@ -1,5 +1,7 @@
 #include "MANAGERs\DaoManager.cpp"
 
+using namespace std;
+
 class ProdutoManager {
 private:
     DaoManager &daoManager;

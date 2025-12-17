@@ -2,6 +2,8 @@
 #include "../DAOs/ProdutoDAO.cpp"
 #include "../DAOs/VendedorDAO.cpp"
 
+using namespace std;
+
 class DaoManager {
 private:
     ClienteDAO clienteDAO;

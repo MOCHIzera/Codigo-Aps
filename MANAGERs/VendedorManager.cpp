@@ -1,5 +1,7 @@
 #include "MANAGERs\DaoManager.cpp"
 
+using namespace std;
+
 class VendedorManager {
 private:
     DaoManager &daoManager;

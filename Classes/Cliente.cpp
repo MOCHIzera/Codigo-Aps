@@ -1,24 +1,26 @@
 #include<string>
 
+using namespace std;
+
 class Cliente{
     private:
         int id;
-        std::string nome;
+        string nome;
         int telefone;
     
     public:
         Cliente() = default; // Constructor Base
 
-        Cliente(int id, std::string nome, int telefone){
+        Cliente(int id, string nome, int telefone){
             this -> id = id;
             this -> nome = nome;
             this -> telefone = telefone;
         }
         
-        std::string getNome(){
+        string getNome(){
             return nome;
         }
-        void setNome(std::string nome){
+        void setNome(string nome){
             this -> nome = nome;
         }
 

@@ -1,9 +1,11 @@
 #include <vector>
 #include "../Classes/Produto.cpp"
 
+using namespace std;
+
 class ProdutoDAO {
     private:
-        std::vector<Produto> produtos;
+        vector<Produto> produtos;
 
     public:
         // CREATE
@@ -44,7 +46,7 @@ class ProdutoDAO {
         }
 
         // LISTAR
-        std::vector<Produto> list() {
+        vector<Produto> list() {
             return produtos;
         }
 };

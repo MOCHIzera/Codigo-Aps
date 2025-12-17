@@ -1,10 +1,12 @@
 #include "Categoria.cpp"
 #include <string>
 
+using namespace std;
+
 class Produto{
     private:
         int idProduto;
-        std::string nome;
+        string nome;
         double preco;
         double custo;
         int quantidade;
@@ -14,7 +16,7 @@ class Produto{
     public:
         Produto() = default; // Constructor Base
 
-        Produto(int idProduto, std::string nome, double preco, double custo,
+        Produto(int idProduto, string nome, double preco, double custo,
                 int quantidade, Categoria categoria, bool disponibilidade){
             this -> idProduto = idProduto;
             this -> nome = nome;
@@ -32,10 +34,10 @@ class Produto{
             this -> idProduto = idProduto;
         }
 
-        std::string getNomeProduto(){
+        string getNomeProduto(){
             return nome;
         }
-        void setNome(std::string nome){
+        void setNome(string nome){
             this -> nome = nome;
         }
 

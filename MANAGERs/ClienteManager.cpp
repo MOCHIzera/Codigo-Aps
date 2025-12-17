@@ -1,5 +1,7 @@
 #include "DaoManager.cpp"
 
+using namespace std;
+
 class ClienteManager {
 private:
     DaoManager &daoManager;

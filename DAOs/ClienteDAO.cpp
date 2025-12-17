@@ -1,9 +1,11 @@
 #include <vector>
 #include "../Classes/Cliente.cpp"
 
+using namespace std;
+
 class ClienteDAO {
     private:
-        std::vector<Cliente> clientes;
+        vector<Cliente> clientes;
 
     public:
         // CREATE
@@ -44,7 +46,7 @@ class ClienteDAO {
         }
 
         // LISTAR
-        std::vector<Cliente> list() {
+        vector<Cliente> list() {
             return clientes;
         }
 };
