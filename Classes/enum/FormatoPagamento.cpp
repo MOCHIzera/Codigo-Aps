@@ -1,1 +1,7 @@
-enum class FormatoPagamento{Fiada, Dinheiro, Cartão, Parcelado};
+enum class FormatoPagamento
+{
+    Fiada,
+    Dinheiro,
+    Cartão,
+    Parcelado
+};
