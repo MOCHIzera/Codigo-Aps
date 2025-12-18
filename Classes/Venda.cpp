@@ -1,4 +1,4 @@
-#include "enum/FormatoPagamento.cpp"
+#include "enum/FormatoPagamento.h"
 
 using namespace std;
 

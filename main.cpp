@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <locale>
 #include "MANAGERs/ClienteManager.cpp"
+#include "BDs/BDtxt.cpp"
 
 void limparTerminal(){
     std::cout << "\033[2J\033[H";
@@ -21,10 +22,10 @@ void creditos(){
     std::cout << "Trabalho feito sobre orientação do Professor Lucio Geronimo Valentin." << std::endl << std::endl;
 }
 
-int cadastroCliente(ClienteManager &clienteManager){
+void cadastroCliente(ClienteManager &clienteManager){
     setlocale(LC_ALL, "pt_BR.utf8");
     DaoManager daoManager;
-    ClienteManager clienteManager(daoManager);
+    ClienteManager &clienteManager(daoManager);
 
     int id;
     int telefone;
@@ -49,7 +50,7 @@ int cadastroCliente(ClienteManager &clienteManager){
     }
 }
 
-void removeCliente(ClienteManager &clienteManager){
+void removeCliente(){
     setlocale(LC_ALL, "pt_BR.utf8");
     DaoManager daoManager;
     ClienteManager clienteManager(daoManager);
@@ -62,19 +63,19 @@ void removeCliente(ClienteManager &clienteManager){
 
 }
 
-void buscaCliente(ClienteManager &clienteManager){
+void buscaCliente(){
 
 }
 
-void listaCliente(ClienteManager &clienteManager){
+void listaCliente(){
 
 }
 
-void atualizarCliente(ClienteManager &clienteManager){
+void atualizarCliente(){
 
 }
 
-void subMenuCliente(ClienteManager &clienteManager){
+void subMenuCliente(){
     int opcao = 0;
     std::cout << "O que você quer fazer?" << std::endl
                           << ">> [1] Cadastrar um Cliente" << std::endl
@@ -85,7 +86,7 @@ void subMenuCliente(ClienteManager &clienteManager){
     std::cin >> opcao;
     switch(opcao){
         case 1:{
-            cadastroCliente(clienteManager);
+            cadastroCliente();
             break;
             }
         case 2:{
@@ -104,6 +105,7 @@ void subMenuCliente(ClienteManager &clienteManager){
             atualizarCliente(clienteManager);
             break;
             }
+    }
 }
 
 void opcoes(){
@@ -132,8 +134,7 @@ void opcoes(){
             }
             case 2:{
                 std::cout << "Opção " << opcao << " selecionada." << std::endl << std::endl;
-                subMenuCliente;
-                }
+                subMenuCliente();
                 break;
             }
             case 3:{
@@ -193,31 +194,46 @@ void intro(){
 int main(){
     setlocale(LC_ALL, "pt_BR.utf8");
 
-    DaoManager daoManager;
-    ClienteManager clienteManager(daoManager);
+    int id;
+    string nome;
+    int telefone;
 
-    char continuar;
+    cout << "ID: " << ";";
+    cin >> id;
+    cout << "Nome: " << ";";
+    getline(cin, nome);
+    cout << "Telefone: " << ";";
+    cin >> telefone;
+    
+    BDClientes(&id, &nome, &telefone);
 
-    limparTerminal();
+    cout << "Caboco inserido!" << endl;
+
+    // DaoManager daoManager;
+    // ClienteManager clienteManager(daoManager);
+
+    // char continuar;
+
+    // limparTerminal();
     
-    intro();
+    // intro();
     
-    while(1){
-        volta:{
-            opcoes();
-        }
+    // while(1){
+    //     volta:{
+    //         opcoes();
+    //     }
         
-        std::cout << "Deseja realizar mais alguma operação? [S/N]" << std::endl << "> ";
-        std::cin >> continuar;
+    //     std::cout << "Deseja realizar mais alguma operação? [S/N]" << std::endl << "> ";
+    //     std::cin >> continuar;
 
-        if(continuar == 's' || continuar == 'S'){
-            limparTerminal();
-            goto volta;
-        } else{
-            std::cout << std::endl << "Obrigado por utilizar nossos serviços!" << std::endl;
-            std::cout << "Até Breve!" <<std::endl << std::endl;
-            break;
-        }
-    }
+    //     if(continuar == 's' || continuar == 'S'){
+    //         limparTerminal();
+    //         goto volta;
+    //     } else{
+    //         std::cout << std::endl << "Obrigado por utilizar nossos serviços!" << std::endl;
+    //         std::cout << "Até Breve!" <<std::endl << std::endl;
+    //         break;
+    //     }
+    // }
     return 0;
 }

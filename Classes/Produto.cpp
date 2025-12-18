@@ -1,4 +1,4 @@
-#include "enum/Categoria.cpp"
+#include "enum/Categoria.h"
 #include <string>
 
 using namespace std;
@@ -10,7 +10,7 @@ class Produto{
         double preco;
         double custo;
         int quantidade;
-        Categoria categoria;
+        Categoria categorias;
         bool disponibilidade;
     
     public:

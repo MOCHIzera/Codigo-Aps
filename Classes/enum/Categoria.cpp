@@ -1,7 +1,1 @@
-enum class Categoria
-{
-    Pele,
-    Cabelo,
-    Unha,
-    Outros
-};
+#include "Categoria.h"
